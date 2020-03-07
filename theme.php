@@ -19,16 +19,22 @@
 		
 		<?= $Wcms->css() ?>
 	</head>
+	
+	
+	
 
 	<body>
 		<?= $Wcms->settings() ?>
 		<?= $Wcms->alerts() ?>
+		
+		
+		
 
 		<nav class="navbar navbar-expand-lg navbar-light navbar-default">
 			<div class="container">
-				<a class="navbar-brand" href="<?= $Wcms->url() ?>">
-					<?= $Wcms->get('config', 'siteTitle') ?>
-				</a>
+				<a class="navbar-logo" href="<?= $Wcms->url() ?>"><img src="/logo.png" alt="teckblock.ml - LOGO" width="25%" border="0">
+					</a>
+				<a class="navbar-brand" href="<?= $Wcms->url() ?>"><?= $Wcms->get('config', 'siteTitle') ?></a>
 
 				<div class="navbar-header">
 				<button type="button" class="navbar-toggler navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
@@ -48,8 +54,8 @@
 			</div>
 		</nav>
 		
-		<div class="container-fluid blueBackground whiteFont">
-			<div class="row">
+		<div class="container-leftsidebar menucolor">
+			<div class="column left">
 				<div class="col-lg-12 text-center padding40">
 					
 <?= $Wcms->block('leftSideBar')?>
@@ -57,7 +63,17 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="container-sidebar menucolor">
+			<div class="column right">
+				<div class="col-lg-12 text-center padding40">
+					<?= $Wcms->block('subside') ?>
 
+				</div>
+			</div>
+		</div>
+		
+	
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center padding40">
@@ -70,24 +86,27 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center padding40">
+					<?= $Wcms->page('content') ?>
+
+				</div>
+			</div>
+		</div>
+		
+		
+			<div class="container-blockarticle">
+			<div class="row">
+				<div class="col-lg-12 text-center padding40">
 					<?= $Wcms->block('articleContent')?>
 				</div>
 			</div>
 		</div>
-		
+
 		
 
-		<div class="container-fluid blueBackground whiteFont">
-			<div class="row">
-				<div class="col-lg-12 text-center padding40">
-					<?= $Wcms->block('subside') ?>
-
-				</div>
-			</div>
-		</div>
+		
 		
 		<div class="container-fluid blueBackground whiteFont">
-			<div class="row">
+			<div class="row-menu">
 				<div class="col-lg-12 text-center padding40">
 					<?= $Wcms->block('MenuSidebar')?>
 
@@ -98,7 +117,7 @@
 		
 
 		<footer class="container-fluid">
-			<div class="text-right padding20">
+			<div class="text-left padding20">
 				<?= $Wcms->footer() ?>
 
 			</div>
