@@ -51,7 +51,9 @@
 		<div class="container-fluid blueBackground whiteFont">
 			<div class="row">
 				<div class="col-lg-12 text-center padding40">
-					<?=leftSideBar()?>
+					
+<?= $Wcms->block('leftSideBar')?>
+
 				</div>
 			</div>
 		</div>
@@ -68,7 +70,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center padding40">
-					<?=articleContent()?>
+					<?= $Wcms->block('articleContent')?>
 				</div>
 			</div>
 		</div>
@@ -87,7 +89,7 @@
 		<div class="container-fluid blueBackground whiteFont">
 			<div class="row">
 				<div class="col-lg-12 text-center padding40">
-					<?=MenuSidebar()?>
+					<?= $Wcms->block('MenuSidebar')?>
 
 				</div>
 			</div>
