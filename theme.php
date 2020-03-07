@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 		<title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
 		<meta name="description" content="<?= $Wcms->page('description') ?>">
 		<meta name="keywords" content="<?= $Wcms->page('keywords') ?>">
@@ -15,6 +16,7 @@
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="<?= $Wcms->asset('css/style.css') ?>">
 		
 		<?= $Wcms->css() ?>
@@ -32,7 +34,7 @@
 
 		<nav class="navbar navbar-expand-lg navbar-light navbar-default">
 			<div class="container">
-				<a class="navbar-logo" href="<?= $Wcms->url() ?>"><img src="/logo.png" alt="teckblock.ml - LOGO" width="25%" border="0">
+				<a class="navbar-logo" href="<?= $Wcms->url() ?>"><img class="logo" src="/logo.png" alt="teckblock.ml - LOGO">
 					</a>
 				<a class="navbar-brand" href="<?= $Wcms->url() ?>"><?= $Wcms->get('config', 'siteTitle') ?></a>
 
@@ -53,9 +55,9 @@
 				</div>
 			</div>
 		</nav>
-		
-		<div class="container-leftsidebar menucolor">
-			<div class="column left">
+	<div class="w3-row-padding">
+		<div class="container-leftsidebar menucolor w3-col w3-container" style="width:20%">
+			<div class="column-left">
 				<div class="col-lg-12 text-center padding40">
 					
 <?= $Wcms->block('leftSideBar')?>
@@ -64,49 +66,44 @@
 			</div>
 		</div>
 		
+		<div class="container w3-col w3-container" style="width:60%">
+			<div class="row-middle">
+				<div class="col-lg-12 text-center padding40">
+					<?= $Wcms->page('content') ?>
+
+				</div>
+			</div>
+		</div>
+		
+		
+<div class="container-blockarticle w3-col w3-container" style="width:20%">
+			<div class="column-right">
+				<div class="col-lg-12 text-center padding40">
+					<?= $Wcms->block('articleContent')?>
+				</div>
+			</div>
+		</div>
+		
+	
+	</div>
+		
+		
+		
+			
+
 		<div class="container-sidebar menucolor">
-			<div class="column right">
+			<div class="row-about">
 				<div class="col-lg-12 text-center padding40">
 					<?= $Wcms->block('subside') ?>
 
 				</div>
 			</div>
 		</div>
-		
-	
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center padding40">
-					<?= $Wcms->page('content') ?>
-
-				</div>
-			</div>
-		</div>
-		
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center padding40">
-					<?= $Wcms->page('content') ?>
-
-				</div>
-			</div>
-		</div>
-		
-		
-			<div class="container-blockarticle">
-			<div class="row">
-				<div class="col-lg-12 text-center padding40">
-					<?= $Wcms->block('articleContent')?>
-				</div>
-			</div>
-		</div>
-
-		
 
 		
 		
-		<div class="container-fluid blueBackground whiteFont">
-			<div class="row-menu">
+		<div class="container-fluid menucolor">
+			<div class="row-menu-footer">
 				<div class="col-lg-12 text-center padding40">
 					<?= $Wcms->block('MenuSidebar')?>
 
@@ -116,7 +113,7 @@
 		
 		
 
-		<footer class="container-fluid">
+		<footer class="container-fluid menucolor-foot">
 			<div class="text-left padding20">
 				<?= $Wcms->footer() ?>
 
