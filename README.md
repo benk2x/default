@@ -1,8 +1,8 @@
-# Default WonderCMS theme
+# teckblock.ml - WonderCMS - Theme
 Fully responsive.
 
 ## Preview
-![Theme preview](/preview.jpg)
+![Theme preview](/xxx.jpg)
 
 ## How to use
 1. Login to your WonderCMS website.
