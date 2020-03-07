@@ -34,9 +34,19 @@ ul.nav.navbar-nav.navbar-right li a:hover, ul.nav.navbar-nav.navbar-right li.act
 	border-bottom: 1px solid #1ab;
 }
 
+.text-left{
+    position: relative;
+}
+
 footer {
-	bottom: 0;
+	bottom: 10;
 	width: 100%;
-	font-size: 13px;
+	font-size: 15px;
 	position: absolute;
+}
+
+.navbar-brand{
+    position: fixed;
+    
+    
 }
